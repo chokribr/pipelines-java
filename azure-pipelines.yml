@@ -15,7 +15,7 @@ jobs:
   environment: 
     name: testvirtual
     resourceType: VirtualMachine
-    tags: test1 # only deploy to virtual machines with this tag
+    tags: test2 # only deploy to virtual machines with this tag
   strategy:
     runOnce:
       deploy:   

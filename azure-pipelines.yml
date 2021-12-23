@@ -5,9 +5,12 @@
 
 trigger:
 - master
-
 pool:
-  vmImage: ubuntu-latest
+  vmImage: 'test'
+steps:
+- bash: echo "Hello world"
+pool:
+  vmImage: test
 
 steps:
 - task: Maven@3

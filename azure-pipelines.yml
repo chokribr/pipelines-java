@@ -13,7 +13,7 @@ jobs:
 - deployment: VMDeploy
   displayName: Deploy to VM
   environment: 
-    name: ContosoDeploy
+    name: testvirtual
     resourceType: VirtualMachine
     tags: test1 # only deploy to virtual machines with this tag
   strategy:

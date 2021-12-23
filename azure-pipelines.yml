@@ -5,10 +5,7 @@
 
 trigger:
 - master
-pool:
-  vmImage: 'test'
-steps:
-- bash: echo "Hello world"
+
 pool:
   vmImage: test
 

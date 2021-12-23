@@ -9,8 +9,18 @@ trigger:
 pool:
   vmImage: test
 
-steps:
-- task: Maven@3
+jobs:
+- deployment: VMDeploy
+  displayName: Deploy to VM
+  environment: 
+    name: ContosoDeploy
+    resourceType: VirtualMachine
+    tags: windows # only deploy to virtual machines with this tag
+  strategy:
+    runOnce:
+      deploy:   
+          steps:
+          - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
     mavenOptions: '-Xmx3072m'
